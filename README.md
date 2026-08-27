@@ -1,7 +1,8 @@
 # 🩸 LifelineXK — Build. Automate. Analyze. Ship.
 
 <p align="center">
-  <b>Connecting Heroes. Saving Lives.</b>
+  <b>Connecting Heroes. Saving Lives.</b><br><br>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
 </p>
 
 ---
