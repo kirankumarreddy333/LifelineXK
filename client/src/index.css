@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ===== LifelineXK Design Tokens ===== */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  --color-background: #ffffff;
+  --color-surface: #f8f8f8;
+  --color-card: #ffffff;
+  --color-ink: #111111;
+  --color-ink-soft: #666666;
+  --color-line: #e5e5e5;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+
+  --radius-xl2: 1.25rem;
+  --radius-xl3: 1.75rem;
+
+  --shadow-soft: 0 1px 3px rgba(17, 17, 17, 0.06), 0 8px 24px rgba(17, 17, 17, 0.06);
+  --shadow-lift: 0 2px 6px rgba(17, 17, 17, 0.06), 0 16px 40px rgba(17, 17, 17, 0.1);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 2.5s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+}
+
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-ink font-sans antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: #111111;
+  color: #ffffff;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* ===== Utilities ===== */
+.container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #111111 40%, #555555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
