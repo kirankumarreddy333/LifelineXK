@@ -100,12 +100,16 @@ class _EditDonorDialogState extends State<EditDonorDialog> {
     const primaryRed = Color(0xFFDC2626);
     const darkText = Color(0xFF111827);
 
-    return Dialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-      child: Container(
-        maxWidth: 500,
-        padding: const EdgeInsets.all(24),
-        child: SingleChildScrollView(
+   return Dialog(
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(15),
+  ),
+  child: Container(
+    constraints: const BoxConstraints(
+      maxWidth: 500,
+    ),
+    padding: const EdgeInsets.all(24),
+    child: SingleChildScrollView(
           child: Form(
             key: _formKey,
             child: Column(

@@ -2,21 +2,34 @@
 node_modules/
 **/node_modules/
 
+# Python
+__pycache__/
+*.pyc
+
 # Build outputs
 dist/
 build/
+coverage/
 *.tsbuildinfo
 
 # Environment
 .env
-.env.local
-.env.production
+.env.*
+!.env.example
 
 # Firebase
 .firebase/
+firebase-debug.log
 
 # Uploads (local avatar fallback)
 server/uploads/*
+
+# Secrets & Credentials
+*.pem
+*.key
+*.p12
+*.sqlite
+*.db
 
 # Logs
 *.log
@@ -32,4 +45,3 @@ yarn-error.log*
 
 # OS
 Thumbs.db
-
